@@ -62,6 +62,7 @@ class App extends Component {
       case leagueVal === "AL" && divisionVal === "West":
       results = results.filter(x => x.league === "AL" && x.division === "West");
       break;
+
       case leagueVal === "NL" && divisionVal === "All-Leagues":
       results = results.filter(x => x.league === "NL");
       break;
@@ -73,6 +74,19 @@ class App extends Component {
       break;
       case leagueVal === "NL" && divisionVal === "West":
       results = results.filter(x => x.league === "NL" && x.division === "West");
+      break;
+
+      case leagueVal === "All-Leagues" && divisionVal === "All-Leagues":
+      results = results.filter(x => x.league === "NL");
+      break;
+      case leagueVal === "All-Leagues" && divisionVal === "Central":
+      results = results.filter(x => x.division === "Central");
+      break;
+      case leagueVal === "All-Leagues" && divisionVal === "East":
+      results = results.filter(x => x.division === "East");
+      break;
+      case leagueVal === "All-Leagues" && divisionVal === "West":
+      results = results.filter(x => x.division === "West");
       break;
       default:
       results = results
