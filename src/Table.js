@@ -2,7 +2,7 @@ import React from 'react'
 import './table.css'
 
 const Table = ({results, leagueValue, divisionValue, renderTableHeader, renderTableData}) => {
-
+console.log('in table...', results)
 if(leagueValue && divisionValue) {
   return (
     <div>

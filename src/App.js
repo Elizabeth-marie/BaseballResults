@@ -27,32 +27,51 @@ class App extends Component {
    this.setState({
      results: json,
    })
-   console.log(this.state.results)
+   // console.log(this.state.results)
  }
 
   //have headerOne. Only want Division and League to display once so it won't work within the map functon
   //Make two drop downs
   //first will be division second will be League
   //what gets passed as props to the table should be filtered based on drop down selection
-  //leauge and division header should update depending on the drop down selection
+  //league and division header should update depending on the drop down selection
 
   //step one: create drop downs CHECK :)
-  //step two: get drop downs connected to the header
-  //step three: get drop downs connected with props
+  //step two: get drop downs connected to the header CHECK :)
+  //step three: get drop downs connected with props CHECK :)
   //step four: get props passing correctly
-
-  // renderHeaderOne() {
-  //   let header = Object.keys(this.state.results[0]).filter(x => x !== "team" && x !== "wins" && x !== "losses")
-  //   console.log(header, "THIS IS THE TOP")
-  //   return header.map((key, index) => {
-  //      return <h2 key={index}>{key.toUpperCase()}</h2>
-  //   })
-  // }
 
 //******************TABLE FUNCTIONS TO BE PASSED*******
 renderTableData() {
-  console.log('INSIDE RENDER TABLE FUNCTION')
-     return this.state.results.map((result, index) => {
+  let results = this.state.results
+  let leagueVal = this.state.leagueValue
+  let divisionVal = this.state.divisionValue
+
+  switch(true) {
+    case leagueVal === "AL" && divisionVal === "Central":
+    results = results.filter(x => x.league === "AL" && x.division === "Central");
+    break;
+    case leagueVal === "AL" && divisionVal === "East":
+    results = results.filter(x => x.league === "AL" && x.division === "East");
+    break;
+    case leagueVal === "AL" && divisionVal === "West":
+    results = results.filter(x => x.league === "AL" && x.division === "West");
+    break;
+    case leagueVal === "NL" && divisionVal === "Central":
+    results = results.filter(x => x.league === "NL" && x.division === "Central");
+    break;
+    case leagueVal === "NL" && divisionVal === "East":
+    results = results.filter(x => x.league === "NL" && x.division === "East");
+    break;
+    case leagueVal === "NL" && divisionVal === "West":
+    results = results.filter(x => x.league === "NL" && x.division === "West");
+    break;
+
+  }
+  // if(leagueVal === "AL") {
+  //   results = results.filter(x => x.league === "AL")
+  // }
+     return results.map((result, index) => {
         const { team, wins, losses } = result //destructuring
         return (
            <tr key={index}>
@@ -79,21 +98,21 @@ renderTableData() {
 
 onSelectDivision(event) {
   this.setState({divisionValue: event.target.value})
+
 }
 
 onSelectLeague(event) {
   this.setState({leagueValue: event.target.value})
-  console.log(event.target.value, "This is the league value")
-
+  // console.log(event.target.value, "This is the league value")
 }
 
   divisionDropDown() {
-    console.log("THIS IS THE DIVISION:", this.state.divisionValue)
     return(
       <div>
       <h4>Selection a Division</h4>
       <select onChange={this.onSelectDivision.bind(this)}>
         <option selected disabled defaultValue="">Choose a Division</option>
+        <option value="All-Divisions">All Divisions</option>
         <option value="Central">Central</option>
         <option value="East">East</option>
         <option value="West">West</option>
@@ -105,12 +124,12 @@ onSelectLeague(event) {
 
 
   leagueDropDown() {
-    console.log("THIS IS THE LEAGUE:", this.state.leagueValue)
     return(
       <div>
       <h4>Selection a League</h4>
       <select onChange={this.onSelectLeague.bind(this)}>
         <option selected disabled defaultValue="">Choose a League</option>
+        <option value="ALL-LEAGUES">ALL Leagues</option>
         <option value="AL">AL</option>
         <option value="NL">NL</option>
       </select>
@@ -118,8 +137,26 @@ onSelectLeague(event) {
     )
   }
 
+  //create a function to filter results conditionally based on dropdown choices
+//if league === AL then filter results with AL
+//if league === Central then filter results with Central
+//Have to do every possible combination? Maybe a switch statement
+//Table data currently utilizing all results
+//could create a filtered variable in state?
+//might need to move logic into the table data function
+
+  // filterResults() {
+  //     if(this.state.leagueValue === "AL"){
+  //       this.setState({
+  //         results: this.state.results.filter(x => x.league === "AL")
+  //       })
+  //     }
+  //     console.log(this.state.results)
+  // }
+
 
   render() {
+
     return (
       <div className="App">
         <h1>Season Results</h1>
@@ -136,10 +173,8 @@ onSelectLeague(event) {
         <Table
           renderTableHeader={this.renderTableHeader.bind(this)}
           renderTableData={this.renderTableData.bind(this)}
-          results={this.state.results}
           leagueValue={this.state.leagueValue}
-          divisionValue={this.state.divisionValue}
-          />
+          divisionValue={this.state.divisionValue}/>
       </div>
     );
   }
