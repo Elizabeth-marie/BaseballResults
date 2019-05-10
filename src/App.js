@@ -2,19 +2,33 @@ import React, { Component } from 'react';
 import Table from './Table'
 import './App.css';
 
+
+const API = process.env.API || 'https://api.mobileqa.mlbinfra.com/api/interview/v1/records '
+
+const getRecords = async () => {
+  const response = await fetch(`${API}`)
+  const json = await response.json()
+  return json
+}
+
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      results: [
-         { team: "KCR", wins: 58, losses: 21, league: 'AL', division: "Central" },
-         { team: "KCR", wins: 58, losses: 21, league: 'AL', division: "Central" },
-         { team: "KCR", wins: 58, losses: 21, league: 'AL', division: "Central" },
-      ],
+      results: [{team: 1, wins: 1, losses:1}],
       leagueValue: '',
       divisionValue: '',
     }
   }
+
+  async componentDidMount() {
+   console.log('*******Component Mounted*********')
+   const json = await getRecords()
+   this.setState({
+     results: json,
+   })
+   console.log(this.state.results)
+ }
 
   //have headerOne. Only want Division and League to display once so it won't work within the map functon
   //Make two drop downs
@@ -34,9 +48,37 @@ class App extends Component {
   //      return <h2 key={index}>{key.toUpperCase()}</h2>
   //   })
   // }
+
+//******************TABLE FUNCTIONS TO BE PASSED*******
+renderTableData() {
+  console.log('INSIDE RENDER TABLE FUNCTION')
+     return this.state.results.map((result, index) => {
+        const { team, wins, losses } = result //destructuring
+        return (
+           <tr key={index}>
+              <td>{team}</td>
+              <td>{wins}</td>
+              <td>{losses}</td>
+           </tr>
+        )
+     })
+  }
+  renderTableHeader() {
+        let header = Object.keys(this.state.results[0]).filter(x => x !== "league" && x !== "division")
+        return header.map((key, index) => {
+           return <th key={index}>{key.toUpperCase()}</th>
+        })
+     }
+
+
+
+
+
+
+
+
 onSelectDivision(event) {
   this.setState({divisionValue: event.target.value})
-  // console.log(event.target.value, "This is the division value")
 
 }
 
@@ -51,7 +93,7 @@ onSelectLeague(event) {
       <div>
       <h4>Selection a Division</h4>
       <select onChange={this.onSelectDivision.bind(this)}>
-        <option selected disabled>Choose a Division</option>
+        <option selected disabled defaultValue="">Choose a Division</option>
         <option value="Central">Central</option>
         <option value="East">East</option>
         <option value="West">West</option>
@@ -67,7 +109,7 @@ onSelectLeague(event) {
       <div>
       <h4>Selection a League</h4>
       <select onChange={this.onSelectLeague.bind(this)}>
-        <option selected disabled>Choose a League</option>
+        <option selected disabled defaultValue="">Choose a League</option>
         <option value="AL">AL</option>
         <option value="NL">NL</option>
       </select>
@@ -91,6 +133,8 @@ onSelectLeague(event) {
           <h3>{this.state.divisionValue}</h3>
         </div>
         <Table
+          renderTableHeader={this.renderTableHeader.bind(this)}
+          renderTableData={this.renderTableData.bind(this)}
           results={this.state.results}
           />
       </div>
