@@ -10,7 +10,9 @@ class App extends Component {
          { team: "KCR", wins: 58, losses: 21, league: 'AL', division: "Central" },
          { team: "KCR", wins: 58, losses: 21, league: 'AL', division: "Central" },
          { team: "KCR", wins: 58, losses: 21, league: 'AL', division: "Central" },
-      ]
+      ],
+      leagueValue: '',
+      divisionValue: '',
     }
   }
 
@@ -20,7 +22,7 @@ class App extends Component {
   //what gets passed as props to the table should be filtered based on drop down selection
   //leauge and division header should update depending on the drop down selection
 
-  //step one: create drop downs
+  //step one: create drop downs CHECK :)
   //step two: get drop downs connected to the header
   //step three: get drop downs connected with props
   //step four: get props passing correctly
@@ -32,12 +34,18 @@ class App extends Component {
   //      return <h2 key={index}>{key.toUpperCase()}</h2>
   //   })
   // }
+onSelectDivision(event) {
+  this.setState({divisionValue: event.target.value})
+  // console.log(event.target.value, "This is the division value")
+
+}
+
 
   divisionDropDown() {
     return(
       <div>
       <h4>Selection a Division</h4>
-      <select>
+      <select onChange={this.onSelectDivision.bind(this)}>
         <option value="Central">Central</option>
         <option value="East">East</option>
         <option value="West">West</option>
@@ -63,15 +71,15 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Season Results</h1>
-        <div>{this.divisionDropDown()}</div>
         <div>{this.leagueDropDown()}</div>
+        <div>{this.divisionDropDown()}</div>
         <div>
           <h2>League</h2>
-          <h3>this is the league</h3>
+
         </div>
         <div>
           <h2>Division</h2>
-          <h3>this is the division</h3>
+          <h3>{this.state.divisionValue}</h3>
         </div>
         <Table
           results={this.state.results}
