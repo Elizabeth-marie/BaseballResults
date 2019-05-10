@@ -41,37 +41,46 @@ class App extends Component {
   //step three: get drop downs connected with props CHECK :)
   //step four: get props passing correctly
 
+//********Helper function filter results
+  filteredResults() {
+    let results = this.state.results
+    let leagueVal = this.state.leagueValue
+    let divisionVal = this.state.divisionValue
+
+    switch(true) {
+      case leagueVal === "AL" && divisionVal === "All-Leagues":
+      results = results.filter(x => x.league === "AL");
+      break;
+      case leagueVal === "AL" && divisionVal === "Central":
+      results = results.filter(x => x.league === "AL" && x.division === "Central");
+      break;
+      case leagueVal === "AL" && divisionVal === "East":
+      results = results.filter(x => x.league === "AL" && x.division === "East");
+      break;
+      case leagueVal === "AL" && divisionVal === "West":
+      results = results.filter(x => x.league === "AL" && x.division === "West");
+      break;
+      case leagueVal === "NL" && divisionVal === "All-Leagues":
+      results = results.filter(x => x.league === "NL");
+      break;
+      case leagueVal === "NL" && divisionVal === "Central":
+      results = results.filter(x => x.league === "NL" && x.division === "Central");
+      break;
+      case leagueVal === "NL" && divisionVal === "East":
+      results = results.filter(x => x.league === "NL" && x.division === "East");
+      break;
+      case leagueVal === "NL" && divisionVal === "West":
+      results = results.filter(x => x.league === "NL" && x.division === "West");
+      break;
+      default:
+      results = results
+    }
+    return results
+  }
+
 //******************TABLE FUNCTIONS TO BE PASSED*******
 renderTableData() {
-  let results = this.state.results
-  let leagueVal = this.state.leagueValue
-  let divisionVal = this.state.divisionValue
-
-  switch(true) {
-    case leagueVal === "AL" && divisionVal === "Central":
-    results = results.filter(x => x.league === "AL" && x.division === "Central");
-    break;
-    case leagueVal === "AL" && divisionVal === "East":
-    results = results.filter(x => x.league === "AL" && x.division === "East");
-    break;
-    case leagueVal === "AL" && divisionVal === "West":
-    results = results.filter(x => x.league === "AL" && x.division === "West");
-    break;
-    case leagueVal === "NL" && divisionVal === "Central":
-    results = results.filter(x => x.league === "NL" && x.division === "Central");
-    break;
-    case leagueVal === "NL" && divisionVal === "East":
-    results = results.filter(x => x.league === "NL" && x.division === "East");
-    break;
-    case leagueVal === "NL" && divisionVal === "West":
-    results = results.filter(x => x.league === "NL" && x.division === "West");
-    break;
-
-  }
-  // if(leagueVal === "AL") {
-  //   results = results.filter(x => x.league === "AL")
-  // }
-     return results.map((result, index) => {
+     return this.filteredResults().map((result, index) => {
         const { team, wins, losses } = result //destructuring
         return (
            <tr key={index}>
@@ -129,7 +138,7 @@ onSelectLeague(event) {
       <h4>Selection a League</h4>
       <select onChange={this.onSelectLeague.bind(this)}>
         <option selected disabled defaultValue="">Choose a League</option>
-        <option value="ALL-LEAGUES">ALL Leagues</option>
+        <option value="All-Leagues">ALL Leagues</option>
         <option value="AL">AL</option>
         <option value="NL">NL</option>
       </select>
