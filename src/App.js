@@ -40,12 +40,18 @@ onSelectDivision(event) {
 
 }
 
+onSelectLeague(event) {
+  this.setState({leagueValue: event.target.value})
+  console.log(event.target.value, "This is the league value")
+
+}
 
   divisionDropDown() {
     return(
       <div>
       <h4>Selection a Division</h4>
       <select onChange={this.onSelectDivision.bind(this)}>
+        <option selected disabled>Choose a Division</option>
         <option value="Central">Central</option>
         <option value="East">East</option>
         <option value="West">West</option>
@@ -54,13 +60,16 @@ onSelectDivision(event) {
     )
   }
 
+
+
   leagueDropDown() {
     return(
       <div>
       <h4>Selection a League</h4>
-      <select>
-        <option value="Central">AL</option>
-        <option value="East">NL</option>
+      <select onChange={this.onSelectLeague.bind(this)}>
+        <option selected disabled>Choose a League</option>
+        <option value="AL">AL</option>
+        <option value="NL">NL</option>
       </select>
       </div>
     )
@@ -75,7 +84,7 @@ onSelectDivision(event) {
         <div>{this.divisionDropDown()}</div>
         <div>
           <h2>League</h2>
-
+            {this.state.leagueValue}
         </div>
         <div>
           <h2>Division</h2>
