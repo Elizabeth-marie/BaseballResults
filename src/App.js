@@ -30,16 +30,18 @@ class App extends Component {
    // console.log(this.state.results)
  }
 
-  //have headerOne. Only want Division and League to display once so it won't work within the map functon
-  //Make two drop downs
-  //first will be division second will be League
-  //what gets passed as props to the table should be filtered based on drop down selection
-  //league and division header should update depending on the drop down selection
-
+//******LOGIC FOR DISPLAYING DATA BASED ON DROP DOWNS
   //step one: create drop downs CHECK :)
   //step two: get drop downs connected to the header CHECK :)
   //step three: get drop downs connected with props CHECK :)
-  //step four: get props passing correctly
+  //step four: get props passing correctly CHECK CHECK CHECK!
+
+//******LOGIC FOR ORGANIZING DATA BASED ON WINS/LOSSES
+/*
+  1. results.sort(function(a, b){
+    return b.wins-a.wins
+})
+*/
 
 //********Helper function filter results
   filteredResults() {
@@ -75,7 +77,9 @@ class App extends Component {
       default:
       results = results
     }
-    return results
+    return results.sort(function(a, b){
+      return b.wins-a.wins
+  })
   }
 
 //******************TABLE FUNCTIONS TO BE PASSED*******
@@ -97,12 +101,6 @@ renderTableData() {
            return <th key={index}>{key.toUpperCase()}</th>
         })
      }
-
-
-
-
-
-
 
 
 onSelectDivision(event) {
@@ -145,23 +143,6 @@ onSelectLeague(event) {
       </div>
     )
   }
-
-  //create a function to filter results conditionally based on dropdown choices
-//if league === AL then filter results with AL
-//if league === Central then filter results with Central
-//Have to do every possible combination? Maybe a switch statement
-//Table data currently utilizing all results
-//could create a filtered variable in state?
-//might need to move logic into the table data function
-
-  // filterResults() {
-  //     if(this.state.leagueValue === "AL"){
-  //       this.setState({
-  //         results: this.state.results.filter(x => x.league === "AL")
-  //       })
-  //     }
-  //     console.log(this.state.results)
-  // }
 
 
   render() {
