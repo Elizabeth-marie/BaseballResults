@@ -16,8 +16,8 @@ class App extends Component {
     super()
     this.state = {
       results: [{team: 1, wins: 1, losses:1}],
-      leagueValue: '',
-      divisionValue: '',
+      leagueValue: undefined,
+      divisionValue: undefined,
     }
   }
 
@@ -79,7 +79,6 @@ renderTableData() {
 
 onSelectDivision(event) {
   this.setState({divisionValue: event.target.value})
-
 }
 
 onSelectLeague(event) {
@@ -89,6 +88,7 @@ onSelectLeague(event) {
 }
 
   divisionDropDown() {
+    console.log("THIS IS THE DIVISION:", this.state.divisionValue)
     return(
       <div>
       <h4>Selection a Division</h4>
@@ -105,6 +105,7 @@ onSelectLeague(event) {
 
 
   leagueDropDown() {
+    console.log("THIS IS THE LEAGUE:", this.state.leagueValue)
     return(
       <div>
       <h4>Selection a League</h4>
@@ -136,6 +137,8 @@ onSelectLeague(event) {
           renderTableHeader={this.renderTableHeader.bind(this)}
           renderTableData={this.renderTableData.bind(this)}
           results={this.state.results}
+          leagueValue={this.state.leagueValue}
+          divisionValue={this.state.divisionValue}
           />
       </div>
     );
