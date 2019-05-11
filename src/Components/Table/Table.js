@@ -82,19 +82,19 @@ else if(selectedValue === "League") {
 }
 //************** DIVISION SELECTED *********************
 else if(selectedValue === "Division"){
-  let table1 = results.filter(x => x.league === "AL" && x.division === "Central").sort(function(a, b){
+  let table1 = results.filter(x => x.league === "AL" && x.division === "East").sort(function(a, b){
     return b.wins-a.wins
   })
-  let table2 = results.filter(x => x.league === "AL" && x.division === "East").sort(function(a, b){
+  let table2 = results.filter(x => x.league === "AL" && x.division === "Central").sort(function(a, b){
     return b.wins-a.wins
   })
   let table3 = results.filter(x => x.league === "AL" && x.division === "West").sort(function(a, b){
     return b.wins-a.wins
   })
-  let table4 = results.filter(x => x.league === "AL" && x.division === "Central").sort(function(a, b){
+  let table4 = results.filter(x => x.league === "AL" && x.division === "East").sort(function(a, b){
     return b.wins-a.wins
   })
-  let table5 = results.filter(x => x.league === "AL" && x.division === "East").sort(function(a, b){
+  let table5 = results.filter(x => x.league === "AL" && x.division === "Central").sort(function(a, b){
     return b.wins-a.wins
   })
   let table6 = results.filter(x => x.league === "AL" && x.division === "West").sort(function(a, b){
@@ -104,7 +104,7 @@ else if(selectedValue === "Division"){
 return (
   <div>
     <div className="container">
-      <h4>AL Central</h4>
+      <h4>AL East</h4>
      <table id="results">
        <thead>
          <tr>
@@ -119,7 +119,7 @@ return (
      </table>
      </div>
      <div className="container">
-       <h4>AL East</h4>
+       <h4>AL Central</h4>
       <table id="results">
         <thead>
           <tr>
@@ -150,7 +150,7 @@ return (
        </div>
        <div className="break"></div>
        <div className="container">
-         <h4>NL Central</h4>
+         <h4>NL East</h4>
         <table id="results">
           <thead>
             <tr>
@@ -165,7 +165,7 @@ return (
         </table>
         </div>
         <div className="container">
-          <h4>NL East</h4>
+          <h4>NL Central</h4>
          <table id="results">
            <thead>
              <tr>
