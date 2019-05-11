@@ -15,7 +15,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      results: [{team: 1, wins: 1, losses:1}],
+      results: [],
       leagueValue: undefined,
       divisionValue: undefined,
     }
