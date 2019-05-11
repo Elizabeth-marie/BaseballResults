@@ -1,31 +1,36 @@
 import React from 'react'
 import './Table.css'
 
-const Table = ({results, leagueValue, divisionValue, renderTableHeader, renderTableData}) => {
-console.log('in table...', results)
-if(leagueValue && divisionValue) {
+const Table = ({results, selectedValue, renderTableData}) => {
+
+
+let league1 = results.filter(x => x.league === "AL")
+
+  // let league1 = []
+  //
+  //
+  //   league1.push(results.filter(x => x.league === "AL"))
+
+
+
+
   return (
     <div className="container">
        <table id="results">
          <thead>
            <tr>
-             {renderTableHeader()}
+             <th>TEAM</th>
+             <th>WINS</th>
+             <th>LOSSES</th>
            </tr>
          </thead>
          <tbody >
-           {renderTableData()}
+           {renderTableData(league1)}
          </tbody>
        </table>
     </div>
   )
-}
-else {
-    return (
-      <div>
-        <h1>Please select a league and division to view data</h1>
-      </div>
-    )
-  }
+
 }
 
 
