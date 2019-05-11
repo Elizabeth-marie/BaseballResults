@@ -3,8 +3,9 @@
 }
 /*the container must be positioned relative:*/
 .dropDown {
+    align-self: center;
     border: 1px solid #ccc;
-    width: 120px;
+    width: 180px;
     border-radius: 3px;
     overflow: hidden;
     background: #fafafa url('icon-select.png') no-repeat 90% 50%;
@@ -12,7 +13,7 @@
 }
 .dropDown select {
     padding: 5px 8px;
-    width: 130%;
+    width: 180px;
     border: none;
     box-shadow: none;
     background: transparent;
