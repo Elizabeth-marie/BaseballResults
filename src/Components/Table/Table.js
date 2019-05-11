@@ -5,7 +5,7 @@ const Table = ({results, leagueValue, divisionValue, renderTableHeader, renderTa
 console.log('in table...', results)
 if(leagueValue && divisionValue) {
   return (
-    <div>
+    <div className="container">
        <table id="results">
          <thead>
            <tr>

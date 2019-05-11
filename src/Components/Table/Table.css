@@ -16,7 +16,20 @@
   padding: 8px;
 }
 
-#results tr:nth-child(even){background-color: #f2f2f2;}
+#results th:first-child {
+  border-right: 2px solid rgb(194, 196, 198);
+}
+
+#results td:first-child {
+  border-right: 2px solid rgb(194, 196, 198);
+
+}
+
+#results td:first-child{
+  background-color: #f2f2f2;
+}
+
+/* #results tr:nth-child(even){background-color: #f2f2f2;} */
 
 #results tr:hover {background-color: #ddd;}
 
