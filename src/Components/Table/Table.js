@@ -1,12 +1,12 @@
 import React from 'react'
-import './table.css'
+import './Table.css'
 
 const Table = ({results, leagueValue, divisionValue, renderTableHeader, renderTableData}) => {
 console.log('in table...', results)
 if(leagueValue && divisionValue) {
   return (
     <div>
-       <table id="students">
+       <table id="results">
          <thead>
            <tr>
              {renderTableHeader()}
