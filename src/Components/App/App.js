@@ -71,13 +71,6 @@ onSelectDropdown(event) {
 
   }
 
-
-
-
-
-
-
-
   render() {
 
     return (
