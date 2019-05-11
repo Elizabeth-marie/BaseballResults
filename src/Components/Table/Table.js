@@ -6,21 +6,6 @@ const Table = ({results, selectedValue, renderTableData}) => {
 //Need to have a separate header for each table with division/league use template literal
 //pull in selectedValue for if statements
 
-/*
-if selected is MLB
-want one table arranged by win/loss CHECK!!!!!
-
-if selected is league
-want two tables -> one AL and one NL CHECK!!!! YAY!!!!!
-
-if selected is division
-want 6 tables -> 3 AL w/divisions and 3 NL w/divisions
-//   return results.sort(function(a, b){
-//     return b.wins-a.wins
-// })
-
-*/
-
 //********************* MLB SELECTED ***********************
 if(selectedValue === "MLB") {
   let ranked = results.sort(function(a, b){
@@ -112,10 +97,40 @@ else if(selectedValue === "Division"){
     return b.wins-a.wins
   })
 
-  return (
+return (
+  <div>
     <div className="container">
-      <div>
-        <h4>AL Central</h4>
+      <h4>AL Central</h4>
+     <table id="results">
+       <thead>
+         <tr>
+           <th>TEAM</th>
+           <th>WINS</th>
+           <th>LOSSES</th>
+         </tr>
+       </thead>
+       <tbody >
+         {renderTableData(table1)}
+       </tbody>
+     </table>
+     </div>
+     <div className="container">
+       <h4>AL East</h4>
+      <table id="results">
+        <thead>
+          <tr>
+            <th>TEAM</th>
+            <th>WINS</th>
+            <th>LOSSES</th>
+          </tr>
+        </thead>
+        <tbody >
+          {renderTableData(table2)}
+        </tbody>
+      </table>
+      </div>
+      <div className="container">
+        <h4>AL West</h4>
        <table id="results">
          <thead>
            <tr>
@@ -125,12 +140,13 @@ else if(selectedValue === "Division"){
            </tr>
          </thead>
          <tbody >
-           {renderTableData(table1)}
+           {renderTableData(table3)}
          </tbody>
        </table>
        </div>
-       <div>
-         <h4>AL East</h4>
+       <div id="break"></div>
+       <div className="container">
+         <h4>NL Central</h4>
         <table id="results">
           <thead>
             <tr>
@@ -140,12 +156,12 @@ else if(selectedValue === "Division"){
             </tr>
           </thead>
           <tbody >
-            {renderTableData(table2)}
+            {renderTableData(table4)}
           </tbody>
         </table>
         </div>
-        <div>
-          <h4>AL West</h4>
+        <div className="container">
+          <h4>NL East</h4>
          <table id="results">
            <thead>
              <tr>
@@ -155,12 +171,12 @@ else if(selectedValue === "Division"){
              </tr>
            </thead>
            <tbody >
-             {renderTableData(table3)}
+             {renderTableData(table5)}
            </tbody>
          </table>
          </div>
-         <div>
-           <h4>NL Central</h4>
+         <div className="container">
+           <h4>NL West</h4>
           <table id="results">
             <thead>
               <tr>
@@ -170,82 +186,13 @@ else if(selectedValue === "Division"){
               </tr>
             </thead>
             <tbody >
-              {renderTableData(table4)}
+              {renderTableData(table6)}
             </tbody>
           </table>
           </div>
-          <div>
-            <h4>NL East</h4>
-           <table id="results">
-             <thead>
-               <tr>
-                 <th>TEAM</th>
-                 <th>WINS</th>
-                 <th>LOSSES</th>
-               </tr>
-             </thead>
-             <tbody >
-               {renderTableData(table5)}
-             </tbody>
-           </table>
-           </div>
-           <div>
-             <h4>NL West</h4>
-            <table id="results">
-              <thead>
-                <tr>
-                  <th>TEAM</th>
-                  <th>WINS</th>
-                  <th>LOSSES</th>
-                </tr>
-              </thead>
-              <tbody >
-                {renderTableData(table6)}
-              </tbody>
-            </table>
-            </div>
-    </div>
-  )
-}
-
-
-let league1 = results.filter(x => x.league === "AL")
-let league2 = results.filter(x => x.league === "NL")
-
-
-  return (
-    <div className="container">
-      <div>
-       <table id="results">
-         <thead>
-           <tr>
-             <th>TEAM</th>
-             <th>WINS</th>
-             <th>LOSSES</th>
-           </tr>
-         </thead>
-         <tbody >
-           {renderTableData(league1)}
-         </tbody>
-       </table>
-       </div>
-       <div>
-        <table id="results">
-          <thead>
-            <tr>
-              <th>TEAM</th>
-              <th>WINS</th>
-              <th>LOSSES</th>
-            </tr>
-          </thead>
-          <tbody >
-            {renderTableData(league2)}
-          </tbody>
-        </table>
         </div>
-    </div>
-  )
-
+      )
+    }
 }
 
 
