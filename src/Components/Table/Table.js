@@ -59,6 +59,7 @@ else if(selectedValue === "League") {
        </table>
        </div>
        <div>
+         <div className="break"></div>
          <h4>National League</h4>
         <table id="results">
           <thead>
@@ -144,7 +145,7 @@ return (
          </tbody>
        </table>
        </div>
-       <div id="break"></div>
+       <div className="break"></div>
        <div className="container">
          <h4>NL Central</h4>
         <table id="results">

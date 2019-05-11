@@ -57,21 +57,26 @@ onSelectDropdown(event) {
   this.setState({selectedValue: event.target.value})
 }
 
-
-
   selectDropDown() {
     console.log(this.state.selectedValue, '**********')
     return(
-      <div>
-      <h4>Selection a Division</h4>
-      <select onChange={this.onSelectDropdown.bind(this)}>
-        <option selected defaultValue="All-Divisions">MLB</option>
-        <option value="Division">Division</option>
-        <option value="League">League</option>
-      </select>
+      <div className="dropDown">
+        <select onChange={this.onSelectDropdown.bind(this)}>
+          <option selected defaultValue="All-Divisions">MLB</option>
+          <option value="Division">Division</option>
+          <option value="League">League</option>
+        </select>
       </div>
     )
+
   }
+
+
+
+
+
+
+
 
   render() {
 
