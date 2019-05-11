@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Table from '../Table/Table'
+import Header from '../Header/Header'
+import Table from '../Table/Table';
 import './App.css';
 
 
@@ -150,6 +151,7 @@ onSelectLeague(event) {
 
     return (
       <div className="App">
+        <Header />
         <h1>Season Results</h1>
         <div>{this.leagueDropDown()}</div>
         <div>{this.divisionDropDown()}</div>
