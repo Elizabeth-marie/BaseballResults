@@ -42,38 +42,41 @@ else if(selectedValue === "League") {
   })
 
   return (
-    <div className="container">
-      <div>
-        <h4>American League</h4>
-       <table id="results">
-         <thead>
-           <tr>
-             <th>TEAM</th>
-             <th>WINS</th>
-             <th>LOSSES</th>
-           </tr>
-         </thead>
-         <tbody >
-           {renderTableData(aLeague)}
-         </tbody>
-       </table>
-       </div>
-       <div>
+    <div>
+      <div className="container">
+        <div>
+          <h4>American League</h4>
+         <table id="results">
+           <thead>
+             <tr>
+               <th>TEAM</th>
+               <th>WINS</th>
+               <th>LOSSES</th>
+             </tr>
+           </thead>
+           <tbody >
+             {renderTableData(aLeague)}
+           </tbody>
+         </table>
+         </div>
+         </div>
          <div className="break"></div>
-         <h4>National League</h4>
-        <table id="results">
-          <thead>
-            <tr>
-              <th>TEAM</th>
-              <th>WINS</th>
-              <th>LOSSES</th>
-            </tr>
-          </thead>
-          <tbody >
-            {renderTableData(nLeague)}
-          </tbody>
-        </table>
-        </div>
+         <div className="container">
+           <h4>National League</h4>
+          <table id="results">
+            <thead>
+              <tr>
+                <th>TEAM</th>
+                <th>WINS</th>
+                <th>LOSSES</th>
+              </tr>
+            </thead>
+            <tbody >
+              {renderTableData(nLeague)}
+            </tbody>
+          </table>
+          </div>
+
     </div>
   )
 }
