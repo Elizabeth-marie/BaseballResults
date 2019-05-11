@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header'
+import Selection from '../Selection/Selection'
 import Table from '../Table/Table';
 import './App.css';
 
@@ -152,9 +153,9 @@ onSelectLeague(event) {
     return (
       <div className="App">
         <Header />
-        <h1>Season Results</h1>
-        <div>{this.leagueDropDown()}</div>
-        <div>{this.divisionDropDown()}</div>
+        <Selection
+          divisionDropDown={this.divisionDropDown.bind(this)}
+          leagueDropDown={this.leagueDropDown.bind(this)}/>
         <div>
           <h2>League</h2>
             {this.state.leagueValue}
@@ -175,3 +176,6 @@ onSelectLeague(event) {
 
 
 export default App;
+
+{/* <div>{this.leagueDropDown()}</div>
+<div>{this.divisionDropDown()}</div> */}
