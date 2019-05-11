@@ -27,21 +27,8 @@ class App extends Component {
    this.setState({
      results: json,
    })
-   // console.log(this.state.results)
  }
 
-//******LOGIC FOR DISPLAYING DATA BASED ON DROP DOWNS
-  //step one: create drop downs CHECK :)
-  //step two: get drop downs connected to the header CHECK :)
-  //step three: get drop downs connected with props CHECK :)
-  //step four: get props passing correctly CHECK CHECK CHECK!
-
-//******LOGIC FOR ORGANIZING DATA BASED ON WINS/LOSSES
-/*
-  1. results.sort(function(a, b){
-    return b.wins-a.wins
-})
-*/
 
 //********Helper function filter results
   filteredResults() {
