@@ -110,22 +110,10 @@ class App extends Component {
   // }
 
 //******************TABLE FUNCTIONS TO BE PASSED*******
-// renderTableData() {
-//      return this.state.results.map((result, index) => {
-//         const { team, wins, losses } = result //destructuring
-//         return (
-//            <tr key={index}>
-//               <td>{team}</td>
-//               <td>{wins}</td>
-//               <td>{losses}</td>
-//            </tr>
-//         )
-//      })
-//   }
 
 renderTableData(array) {
      return array.map((result, index) => {
-        const { team, wins, losses } = result //destructuring
+        const { team, wins, losses } = result
         return (
            <tr key={index}>
               <td>{team}</td>
@@ -143,25 +131,25 @@ renderTableData(array) {
   //    }
 
 
-// onSelectDropdown(event) {
-//   this.setState({selectedValue: event.target.value})
-// }
-//
-//
-//
-//   selectDropDown() {
-//     console.log(this.state.selectedValue, '**********')
-//     return(
-//       <div>
-//       <h4>Selection a Division</h4>
-//       <select onChange={this.onSelectDropdown.bind(this)}>
-//         <option selected defaultValue="All-Divisions">MLB</option>
-//         <option value="Division">Division</option>
-//         <option value="League">League</option>
-//       </select>
-//       </div>
-//     )
-//   }
+onSelectDropdown(event) {
+  this.setState({selectedValue: event.target.value})
+}
+
+
+
+  selectDropDown() {
+    console.log(this.state.selectedValue, '**********')
+    return(
+      <div>
+      <h4>Selection a Division</h4>
+      <select onChange={this.onSelectDropdown.bind(this)}>
+        <option selected defaultValue="All-Divisions">MLB</option>
+        <option value="Division">Division</option>
+        <option value="League">League</option>
+      </select>
+      </div>
+    )
+  }
 
 
 
@@ -185,6 +173,10 @@ renderTableData(array) {
     return (
       <div className="App">
 
+        <Selection
+          selectDropDown={this.selectDropDown.bind(this)}
+        />
+
         <Table
           selectedValue={this.state.selectedValue}
           results={this.state.results}
@@ -199,9 +191,9 @@ renderTableData(array) {
 export default App;
 
 // {/* <Header />
-// <Selection
-//   selectDropDown={this.selectDropDown.bind(this)}
-// />
+{/* <Selection
+  selectDropDown={this.selectDropDown.bind(this)}
+/> */}
 // <div>
 //   <h2>League</h2>
 //     {this.state.leagueValue}
