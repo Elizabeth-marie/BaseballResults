@@ -50,14 +50,16 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 margin-top: 4rem;
-/* padding-bottom: 12rem;
-margin-top: 4rem;
-/* margin-bottom: -10rem; */
+margin-bottom: -10rem;
 }
 
 #welcome {
-  margin-top: 4rem;
-  color: rgb(232, 233, 234);
+  margin-top: 3rem;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  text-shadow: 1.5px 1.5px rgb(153, 10, 10);
+  /* text-shadow: 1px 1px rgb(188, 20, 20) */
 }
 /* #jumboContainer {
   position: relative;
