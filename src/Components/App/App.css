@@ -1,56 +1,57 @@
 .App {
   text-align: center;
 }
-/*the container must be positioned relative:*/
-.dropDown {
 
-    border: 1px solid #ccc;
-    width: 180px;
-    border-radius: 3px;
-    overflow: hidden;
-    background: #fafafa url('icon-select.png') no-repeat 90% 50%;
-    background-size: 14%;
+.dropDown {
+  border: 1px solid #ccc;
+  width: 180px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fafafa url('icon-select.png') no-repeat 90% 50%;
+  background-size: 14%;
 }
 .dropDown select {
-    padding: 5px 8px;
-    width: 180px;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    background-image: none;
-    -webkit-appearance: none;
+  padding: 5px 8px;
+  width: 180px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
 }
 
 .dropDown select:focus {
     outline: none;
 }
+
 div.col {
   margin-top: 150px;
 }
-div.dropDown.container {
 
+div.dropDown.container {
  display: inline-block;
+ height: 100%;
 }
+
 #topRow {
   height: 10%;
-  margin-top: 15%;
-  margin-bottom: 4%;
+  margin-top: 10.5rem;
+  margin-bottom: 3rem;
   background-color:rgb(232, 233, 234);
 }
+
 #selectH2 {
   margin-right: 25px;
 }
+
 .jumbotron.jumbotron-fluid {
-  /* background-image: url("baseballBackground.jpg");
+  background-image: url("baseballBackground.jpg");
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%; */
-background-image: url("baseballBackground.jpg");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-margin-top: 4rem;
-margin-bottom: -10rem;
+  background-size: cover;
+  margin-top: 3rem;
+  margin-bottom: -10rem;
 }
 
 #welcome {
@@ -59,4 +60,9 @@ margin-bottom: -10rem;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
   text-shadow: 1.5px 1.5px rgb(153, 10, 10);
+}
+
+#team {
+  font-weight: bold;
+  letter-spacing: 1;
 }

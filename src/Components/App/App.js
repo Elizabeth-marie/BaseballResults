@@ -39,7 +39,7 @@ renderTableData(array) {
         const { team, wins, losses } = result
         return (
            <tr key={index}>
-              <td>{team}</td>
+              <td className="team">{team}</td>
               <td>{wins}</td>
               <td>{losses}</td>
            </tr>
