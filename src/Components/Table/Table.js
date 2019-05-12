@@ -14,7 +14,7 @@ if(selectedValue === "MLB") {
   return (
     <div className="container">
       <div>
-        <h4 className="resultHeadings">Major League Baseball</h4>
+        <h4 className="float-left resultHeadings">Major League Baseball</h4>
        <table id="results">
          <thead>
            <tr>
@@ -45,7 +45,7 @@ else if(selectedValue === "League") {
     <div>
       <div className="container">
         <div>
-          <h4 className="resultHeadings">American League</h4>
+          <h4 className="float-left resultHeadings">American League</h4>
          <table id="results">
            <thead>
              <tr>
@@ -62,7 +62,7 @@ else if(selectedValue === "League") {
          </div>
          <div className="break"></div>
          <div className="container">
-           <h4 className="resultHeadings">National League</h4>
+           <h4 className="float-left resultHeadings">National League</h4>
           <table id="results">
             <thead>
               <tr>
@@ -104,7 +104,7 @@ else if(selectedValue === "Division"){
 return (
   <div>
     <div className="container">
-      <h4 className="resultHeadings">AL East</h4>
+      <h4 className="float-left resultHeadings">AL East</h4>
      <table id="results">
        <thead>
          <tr>
@@ -119,7 +119,7 @@ return (
      </table>
      </div>
      <div className="container">
-       <h4 className="resultHeadings">AL Central</h4>
+       <h4 className="float-left resultHeadings">AL Central</h4>
       <table id="results">
         <thead>
           <tr>
@@ -134,7 +134,7 @@ return (
       </table>
       </div>
       <div className="container">
-        <h4 className="resultHeadings">AL West</h4>
+        <h4 className="float-left resultHeadings">AL West</h4>
        <table id="results">
          <thead>
            <tr>
@@ -150,7 +150,7 @@ return (
        </div>
        <div className="break"></div>
        <div className="container">
-         <h4 className="resultHeadings">NL East</h4>
+         <h4 className="float-left resultHeadings">NL East</h4>
         <table id="results">
           <thead>
             <tr>
@@ -165,7 +165,7 @@ return (
         </table>
         </div>
         <div className="container">
-          <h4 className="resultHeadings">NL Central</h4>
+          <h4 className="float-left resultHeadings">NL Central</h4>
          <table id="results">
            <thead>
              <tr>
@@ -180,7 +180,7 @@ return (
          </table>
          </div>
          <div className="container">
-           <h4 className="resultHeadings">NL West</h4>
+           <h4 className="float-left resultHeadings">NL West</h4>
           <table id="results">
             <thead>
               <tr>
