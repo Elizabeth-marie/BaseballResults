@@ -3,20 +3,20 @@
 An application for users to see MLB team standings ranked by number of
 wins. Users can filter the results 3 ways.
 
-##### Filter MLB
+#### Filter MLB
 The "MLB" selection will display all
 data ranked by wins.
 
 ![MLB picture](./ReadMeImages/SelectionMLB.png "MLB Filter")
 
-##### Filter Division
+#### Filter Division
 
 The "Division" selection will display teams ranked by wins
 with the data filtered by division and by league.
 
 ![MLB picture](./ReadMeImages/SelectionDivision.png "Division Filter")
 
-##### Filter League
+#### Filter League
 
  The "League" selection will
 display data filtered by league only with the teams ranked by wins within each
