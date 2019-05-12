@@ -2,7 +2,7 @@
 
 (https://baseball-results.herokuapp.com/)  
 An application for users to see MLB team standings ranked by number of wins.
-Users canfilter the results 3 ways: filter the results 3 ways:
+Users can filter the results 3 ways:
 
 ### 1. MLB
 The "MLB" selection will display all
