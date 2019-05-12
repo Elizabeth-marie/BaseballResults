@@ -76,7 +76,15 @@ onSelectDropdown(event) {
     return (
       <div className="App">
         <Header />
-        <div className="container">
+
+        <div className="jumbotron jumbotron-fluid">
+          <div id="jumboContainer" className="container">
+          <h1 id="welcome" className="display-4">{` Filter Results By: ${this.state.selectedValue}`}</h1>
+          </div>
+        </div>
+
+
+        <div >
           <div id="topRow" className="row justify-content-center align-items-center">
               <h2 id="selectH2">{` Filter Results By: ${this.state.selectedValue}`}</h2>
               <Selection

@@ -32,10 +32,33 @@ div.dropDown.container {
  display: inline-block;
 }
 #topRow {
-  border: 2px solid black;
   height: 10%;
   margin-top: 15%;
+  margin-bottom: 10%;
+  background-color:rgb(232, 233, 234);
 }
 #selectH2 {
   margin-right: 25px;
 }
+.jumbotron.jumbotron-fluid {
+  /* background-image: url("baseballBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+background-image: url("baseballBackground.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding-bottom: 12rem;
+/* margin-top: 4rem; */
+margin-bottom: -10rem;
+}
+
+#welcome {
+  color: rgb(232, 233, 234);
+}
+/* #jumboContainer {
+  position: relative;
+ top: 80%;
+ transform: translateY(95%);
+} */
