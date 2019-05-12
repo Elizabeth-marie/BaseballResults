@@ -14,7 +14,7 @@ if(selectedValue === "MLB") {
   return (
     <div className="container">
       <div>
-        <h4>MLB all results</h4>
+        <h4 className="resultHeadings">Major League Baseball</h4>
        <table id="results">
          <thead>
            <tr>
@@ -45,7 +45,7 @@ else if(selectedValue === "League") {
     <div>
       <div className="container">
         <div>
-          <h4>American League</h4>
+          <h4 className="resultHeadings">American League</h4>
          <table id="results">
            <thead>
              <tr>
@@ -62,7 +62,7 @@ else if(selectedValue === "League") {
          </div>
          <div className="break"></div>
          <div className="container">
-           <h4>National League</h4>
+           <h4 className="resultHeadings">National League</h4>
           <table id="results">
             <thead>
               <tr>
@@ -91,20 +91,20 @@ else if(selectedValue === "Division"){
   let table3 = results.filter(x => x.league === "AL" && x.division === "West").sort(function(a, b){
     return b.wins-a.wins
   })
-  let table4 = results.filter(x => x.league === "AL" && x.division === "East").sort(function(a, b){
+  let table4 = results.filter(x => x.league === "NL" && x.division === "East").sort(function(a, b){
     return b.wins-a.wins
   })
-  let table5 = results.filter(x => x.league === "AL" && x.division === "Central").sort(function(a, b){
+  let table5 = results.filter(x => x.league === "NL" && x.division === "Central").sort(function(a, b){
     return b.wins-a.wins
   })
-  let table6 = results.filter(x => x.league === "AL" && x.division === "West").sort(function(a, b){
+  let table6 = results.filter(x => x.league === "NL" && x.division === "West").sort(function(a, b){
     return b.wins-a.wins
   })
 
 return (
   <div>
     <div className="container">
-      <h4>AL East</h4>
+      <h4 className="resultHeadings">AL East</h4>
      <table id="results">
        <thead>
          <tr>
@@ -119,7 +119,7 @@ return (
      </table>
      </div>
      <div className="container">
-       <h4>AL Central</h4>
+       <h4 className="resultHeadings">AL Central</h4>
       <table id="results">
         <thead>
           <tr>
@@ -134,7 +134,7 @@ return (
       </table>
       </div>
       <div className="container">
-        <h4>AL West</h4>
+        <h4 className="resultHeadings">AL West</h4>
        <table id="results">
          <thead>
            <tr>
@@ -150,7 +150,7 @@ return (
        </div>
        <div className="break"></div>
        <div className="container">
-         <h4>NL East</h4>
+         <h4 className="resultHeadings">NL East</h4>
         <table id="results">
           <thead>
             <tr>
@@ -165,7 +165,7 @@ return (
         </table>
         </div>
         <div className="container">
-          <h4>NL Central</h4>
+          <h4 className="resultHeadings">NL Central</h4>
          <table id="results">
            <thead>
              <tr>
@@ -180,7 +180,7 @@ return (
          </table>
          </div>
          <div className="container">
-           <h4>NL West</h4>
+           <h4 className="resultHeadings">NL West</h4>
           <table id="results">
             <thead>
               <tr>
@@ -197,6 +197,7 @@ return (
         </div>
       )
     }
+
 }
 
 
