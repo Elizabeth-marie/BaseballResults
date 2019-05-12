@@ -21,7 +21,7 @@ with the data filtered by division and by league.
 
  The "League" selection will
 display data filtered by league only with the teams ranked by wins within each
-league.by wins within each league.
+league.
 
 ![AL picture](./ReadMeImages/SelectionLeague.png "AL Filter")   
 
@@ -41,6 +41,7 @@ Then run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+### Potential Installation Issue
 Ran into an issue once or twice with babel not compiling properly. If this
 error occurs, run:
 
