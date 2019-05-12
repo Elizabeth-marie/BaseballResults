@@ -1,7 +1,8 @@
 ## BaseballResults
 
-An application for users to see MLB team standings ranked by number of
-wins. Users can filter the results 3 ways:
+(https://baseball-results.herokuapp.com/)  
+An application for users to see MLB team standings ranked by number of wins.
+Users canfilter the results 3 ways: filter the results 3 ways:
 
 ### 1. MLB
 The "MLB" selection will display all
@@ -46,26 +47,18 @@ error occurs, run:
 ### `npm i babel-preset-react-app@7.0.0`
 
 
-### Code Splitting
+### Built With
+* React
+* React-Bootstrap
+- Bootstrap  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Author
+* Elizabeth Silver  
 
-### Analyzing the Bundle Size
+### License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+This project is licensed under the MIT License - see the LICENSE.md file for
+details  
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Acknowledgments
+Thank you to MLB for providing the data for this app
