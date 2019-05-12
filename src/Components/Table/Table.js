@@ -2,9 +2,6 @@ import React from 'react'
 import './Table.css'
 
 const Table = ({results, selectedValue, renderTableData}) => {
-//TO DO
-//Need to have a separate header for each table with division/league use template literal
-//pull in selectedValue for if statements
 
 //********************* MLB SELECTED ***********************
 if(selectedValue === "MLB") {
@@ -199,7 +196,6 @@ return (
     }
 
 }
-
 
 
 export default Table
