@@ -2,6 +2,7 @@
   background-image: url("baseballBackground.jpg");
   background-attachment: fixed;
   background-position: center;
+  background-position-y: -8rem;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 3rem;
