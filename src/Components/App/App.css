@@ -3,7 +3,7 @@
 }
 /*the container must be positioned relative:*/
 .dropDown {
-    align-self: center;
+
     border: 1px solid #ccc;
     width: 180px;
     border-radius: 3px;
@@ -23,4 +23,19 @@
 
 .dropDown select:focus {
     outline: none;
+}
+div.col {
+  margin-top: 150px;
+}
+div.dropDown.container {
+
+ display: inline-block;
+}
+#topRow {
+  border: 2px solid black;
+  height: 10%;
+  margin-top: 15%;
+}
+#selectH2 {
+  margin-right: 25px;
 }

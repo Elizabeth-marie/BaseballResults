@@ -76,8 +76,13 @@ onSelectDropdown(event) {
     return (
       <div className="App">
         <Header />
-        <Selection
-          selectDropDown={this.selectDropDown.bind(this)}/>
+        <div className="container">
+          <div id="topRow" className="row justify-content-center align-items-center">
+              <h2 id="selectH2">{` Filter Results By: ${this.state.selectedValue}`}</h2>
+              <Selection
+                selectDropDown={this.selectDropDown.bind(this)}/>
+              </div>
+            </div>
 
         <Table
           selectedValue={this.state.selectedValue}
