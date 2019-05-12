@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import Selection from '../Selection/Selection'
 import Table from '../Table/Table';
+import Footer from '../Footer/Footer'
 import './App.css';
 
 
@@ -96,6 +97,8 @@ onSelectDropdown(event) {
           selectedValue={this.state.selectedValue}
           results={this.state.results}
           renderTableData={this.renderTableData.bind(this)}/>
+
+          <Footer />
       </div>
     );
   }
