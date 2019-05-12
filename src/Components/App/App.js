@@ -79,7 +79,7 @@ onSelectDropdown(event) {
 
         <div className="jumbotron jumbotron-fluid">
           <div id="jumboContainer" className="container">
-          <h1 id="welcome" className="display-4">{` Filter Results By: ${this.state.selectedValue}`}</h1>
+          <h1 id="welcome" className="display-4">Major League Baseball Standings</h1>
           </div>
         </div>
 

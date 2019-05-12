@@ -34,7 +34,7 @@ div.dropDown.container {
 #topRow {
   height: 10%;
   margin-top: 15%;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
   background-color:rgb(232, 233, 234);
 }
 #selectH2 {
@@ -49,12 +49,14 @@ background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-padding-bottom: 12rem;
-/* margin-top: 4rem; */
-margin-bottom: -10rem;
+margin-top: 4rem;
+/* padding-bottom: 12rem;
+margin-top: 4rem;
+/* margin-bottom: -10rem; */
 }
 
 #welcome {
+  margin-top: 4rem;
   color: rgb(232, 233, 234);
 }
 /* #jumboContainer {
