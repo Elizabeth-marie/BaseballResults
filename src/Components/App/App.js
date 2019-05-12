@@ -39,7 +39,7 @@ renderTableData(array) {
         const { team, wins, losses } = result
         return (
            <tr key={index}>
-              <td className="team">{team}</td>
+              <td id="team">{team}</td>
               <td>{wins}</td>
               <td>{losses}</td>
            </tr>
@@ -85,9 +85,9 @@ onSelectDropdown(event) {
         </div>
 
 
-        <div >
+        <div>
           <div id="topRow" className="row justify-content-center align-items-center">
-              <h2 id="selectH2">{` Filter Results By: ${this.state.selectedValue}`}</h2>
+              <h2 id="selectH2">{` Filter Results by ${this.state.selectedValue}`}</h2>
               <Selection
                 selectDropDown={this.selectDropDown.bind(this)}/>
               </div>
