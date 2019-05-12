@@ -63,15 +63,12 @@ class App extends Component {
         <option className="selectText" value="League">League</option>
       </select>
     </div>)
-
   }
 
   render() {
-
     return (
       <div className="App">
       <Header/>
-
       <Jumbotron />
 
       <div>
@@ -82,7 +79,6 @@ class App extends Component {
       </div>
 
       <Table selectedValue={this.state.selectedValue} results={this.state.results} renderTableData={this.renderTableData.bind(this)}/>
-
       <Footer/>
     </div>);
   }
