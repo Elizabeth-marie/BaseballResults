@@ -63,9 +63,9 @@ onSelectDropdown(event) {
     return(
       <div className="dropDown container">
         <select onChange={this.onSelectDropdown.bind(this)}>
-          <option selected defaultValue="All-Divisions">MLB</option>
-          <option value="Division">Division</option>
-          <option value="League">League</option>
+          <option className="selectText" selected defaultValue="All-Divisions">MLB</option>
+          <option className="selectText" value="Division">Division</option>
+          <option className="selectText" value="League">League</option>
         </select>
       </div>
     )

@@ -18,10 +18,12 @@
   background: transparent;
   background-image: none;
   -webkit-appearance: none;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .dropDown select:focus {
     outline: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 div.col {
@@ -47,6 +49,7 @@ div.dropDown.container {
   font-size: 15px;
   font-style: italic;
 }
+
 
 .jumbotron.jumbotron-fluid {
   background-image: url("baseballBackground.jpg");

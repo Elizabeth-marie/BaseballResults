@@ -48,4 +48,8 @@
 
 .resultHeadings {
   align-content: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 1.5rem;
 }
