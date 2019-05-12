@@ -19,11 +19,13 @@
   border-right: 2px solid rgb(194, 196, 198);
 }
 
-#results td:first-child{
+#results td:first-child {
   background-color: #f2f2f2;
 }
 
-#results tr:hover {background-color: #ddd;}
+#results tr:hover {
+  background-color: #ddd;
+}
 
 #results th {
   padding-top: 12px;

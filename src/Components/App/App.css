@@ -51,7 +51,7 @@ div.dropDown.container {
 }
 
 
-.jumbotron.jumbotron-fluid {
+/* .jumbotron.jumbotron-fluid {
   background-image: url("baseballBackground.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -59,7 +59,7 @@ div.dropDown.container {
   background-size: cover;
   margin-top: 3rem;
   margin-bottom: -10rem;
-}
+} */
 
 #welcome {
   margin-top: 3rem;

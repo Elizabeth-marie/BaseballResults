@@ -1,0 +1,9 @@
+.jumbotron.jumbotron-fluid {
+  background-image: url("baseballBackground.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 3rem;
+  margin-bottom: -10rem;
+}
