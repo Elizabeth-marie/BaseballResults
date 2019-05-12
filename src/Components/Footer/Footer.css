@@ -4,4 +4,6 @@
 }
 .float-left {
   margin-left: 2rem;
+  font-family: arial, sans-serif;
+  letter-spacing: 1px;
 }

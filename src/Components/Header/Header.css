@@ -4,4 +4,6 @@
   position: fixed;
   top: 0;
   width: 100%;
+  font-family: arial, sans-serif;
+  letter-spacing: 1px;
 }
