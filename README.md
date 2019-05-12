@@ -47,6 +47,9 @@ error occurs, run:
 
 ### `npm i babel-preset-react-app@7.0.0`
 
+then run:
+
+### `npm start`
 
 ### Built With
 * React
