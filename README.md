@@ -1,7 +1,7 @@
 ## BaseballResults
 
 (https://baseball-results.herokuapp.com/)  
-An application for users to see MLB team standings ranked by number of wins.
+An application for users to see MLB team standings for 2018 ranked by number of wins.
 Users can filter the results 3 ways:
 
 ### 1. MLB
