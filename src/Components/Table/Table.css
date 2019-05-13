@@ -50,3 +50,12 @@
   margin-top: 1.5rem;
   text-shadow: 1px 1px rgb(209, 209, 209);
 }
+
+.leagueHeadings {
+  align-content: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+  margin-top: 1.5rem;
+  text-shadow: 1px 1px rgb(209, 209, 209);
+}

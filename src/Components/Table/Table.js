@@ -101,6 +101,9 @@ else if(selectedValue === "Division"){
 return (
   <div>
     <div className="container">
+      <div className="row justify-content-center">
+      <h4 className="leagueHeadings">American League</h4>
+    </div>
       <h4 className="float-left resultHeadings">AL East</h4>
      <table id="results">
        <thead>
@@ -131,7 +134,7 @@ return (
       </table>
       </div>
       <div className="container">
-        <h4 className="float-left resultHeadings">AL West</h4>
+          <h4 className="float-left resultHeadings">AL West</h4>
        <table id="results">
          <thead>
            <tr>
@@ -147,6 +150,9 @@ return (
        </div>
        <div className="break"></div>
        <div className="container">
+         <div className="row justify-content-center">
+         <h4 className="leagueHeadings">National League</h4>
+         </div>
          <h4 className="float-left resultHeadings">NL East</h4>
         <table id="results">
           <thead>
