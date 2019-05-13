@@ -8,7 +8,8 @@ const Table = ({results, selectedValue, renderTableData}) => {
     let ranked = results.sort(function(a, b) {
       return b.wins - a.wins
     })
-    return (<div className="container">
+    return (
+      <div className="container">
       <div>
         <h4 className="float-left resultHeadings">Major League Baseball</h4>
         <table id="results">
@@ -25,8 +26,10 @@ const Table = ({results, selectedValue, renderTableData}) => {
         </table>
       </div>
     </div>
-    //******************* LEAGUE SELECTED ******************)
-  } else if (selectedValue === "League") {
+    )
+  }
+    //******************* LEAGUE SELECTED ******************
+  else if (selectedValue === "League") {
     let aLeague = results.filter(x => x.league === "AL").sort(function(a, b) {
       return b.wins - a.wins
     })
@@ -34,7 +37,8 @@ const Table = ({results, selectedValue, renderTableData}) => {
       return b.wins - a.wins
     })
 
-    return (<div>
+    return (
+      <div>
       <div className="container">
         <div>
           <h4 className="float-left resultHeadings">American League</h4>
@@ -70,8 +74,10 @@ const Table = ({results, selectedValue, renderTableData}) => {
       </div>
 
     </div>
-    //************** DIVISION SELECTED *********************)
-  } else if (selectedValue === "Division") {
+  )
+}
+    //************** DIVISION SELECTED *********************
+   else if (selectedValue === "Division") {
     let table1 = results.filter(x => x.league === "AL" && x.division === "East").sort(function(a, b) {
       return b.wins - a.wins
     })
@@ -91,7 +97,8 @@ const Table = ({results, selectedValue, renderTableData}) => {
       return b.wins - a.wins
     })
 
-    return (<div>
+    return (
+      <div>
       <div className="container">
         <div className="row justify-content-center">
           <h4 className="leagueHeadings">American League</h4>
@@ -189,9 +196,9 @@ const Table = ({results, selectedValue, renderTableData}) => {
           </tbody>
         </table>
       </div>
-    </div>)
+    </div>
+    )
   }
-
 }
 
 export default Table
