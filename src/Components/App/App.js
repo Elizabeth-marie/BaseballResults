@@ -19,7 +19,7 @@ class App extends Component {
     super()
     this.state = {
       results: [],
-      selectedValue: "MLB"
+      selectedValue: "Division"
     }
   }
 
@@ -58,9 +58,9 @@ class App extends Component {
     console.log(this.state.selectedValue, '**********')
     return (<div className="dropDown container">
       <select onChange={this.onSelectDropdown.bind(this)}>
-        <option className="selectText" selected="selected" defaultValue="All-Divisions">MLB</option>
-        <option className="selectText" value="Division">Division</option>
+        <option className="selectText" selected="selected" defaultValue="Division">Division</option>
         <option className="selectText" value="League">League</option>
+        <option className="selectText" value="MLB">MLB</option>
       </select>
     </div>)
   }
